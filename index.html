@@ -1,108 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/Images/Favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
-      rel="stylesheet"
-    />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Noto+Serif:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
-    <title>Portfolio</title>
+    <title>Portafolio</title>
     <link rel="stylesheet" href="/Styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
   </head>
   <body>
-    <section class="container">
-      <div class="person">
-        <img src="/Images/Index/Profile.jpg" alt=""/>
-        <h1>Aarón Flores Pasos</h1>
-        <h2>Desarrollador Desktop/Web</h2>
+    <!-- Encabezado -->
+    <header class="header">
+      <!-- Logotipo -->
+      <a href="index.html" class="logo">Aarón.</a>
+      <!-- Navegación -->
+      <nav class="navbar">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="#">Acerca de mí</a>
+        <a href="#">Servicios</a>
+        <a href="#">Portafolio</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+    <!-- Contenido principal -->
+    <section class="home">
+      <div class="home-content">
+        <h1 class="home-title">Hola, soy Aarón Flores</h1>
+
+        <h3 class="home-subtitle">Desarrollador desktop y web</h3>
+
+        <p class="home-description">
+          Soy estudiante de Computación en la UDG, con enfoque en desarrollo de
+          aplicaciones desktop y web. Me especializo en front-end y también tengo
+          experiencia en back-end. Mi objetivo es crear interfaces atractivas y
+          funcionales para mejorar la experiencia del usuario.
+        </p>
+
+        <div class="btn-box">
+          <a href="#" class="btn">Contáctame</a>
+          <a href="/Assets/Aarón Flores Pasos - CV.pdf" class="btn" download>Descargar CV</a>
+        </div>
       </div>
-      <h2 class="title__skills">Skills</h2>
-      <div class="skills">
-        <ul>
-          <div class="html">
-            <li>
-              <img
-                src="/Images/Index/HTML5.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-          <div class="css">
-            <li>
-              <img
-                src="/Images/Index/CSS3.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-          <div class="mysql">
-            <li>
-              <img
-                src="/Images/Index/SQLSERVER.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-          <div class="cs">
-            <li>
-              <img
-                src="/Images/Index/CS.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-          <div class="python">
-            <li>
-              <img
-                src="/Images/Index/PYTHON.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-          <div class="git">
-            <li>
-              <img
-                src="/Images/Index/GIT.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-          <div class="github">
-            <li>
-              <img
-                src="/Images/Index/GITHUB.png"
-                alt=""
-                style="height: 32px; width: 32px"
-              />
-            </li>
-          </div>
-        </ul>
-      </div>
-      <h2 class="title__contact">Contacto</h2>
-      <div class="contact">
-        <ul>
-          <div class="contactme">
-            <li><button class="button__contact">Contactame</button></li>
-          </div>
-          <div class="downloadcv">
-            <li><a href="/Files/CV.pdf" download="CV.pdf">Descargar CV</a></li>
-          </div>
-        </ul>
+
+      <!-- Redes sociales -->
+      <div class="home-sci">
+        <a
+          href="https://www.facebook.com/profile.php?id=100009552543394"
+          target="_blank"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/aarón-flores-pasos-dev/"
+          target="_blank"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://github.com/AaronF11" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
       </div>
     </section>
-    <script src="/Scripts/app.js"></script>
   </body>
 </html>
