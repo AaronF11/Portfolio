@@ -41,6 +41,19 @@ header {
   color: var(--color-letter);
   text-decoration: none;
   font-weight: 600;
+  position: relative;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  animation: showRight 1s ease forwards;
+  animation-delay: .4s;
 }
 
 /* header - navbar */
@@ -84,26 +97,80 @@ header {
 .home-title {
   font-size: 56px;
   font-weight: 700;
+  position: relative;
+}
+
+.home-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-subtitle {
   font-size: 32px;
   font-weight: 700;
   color: var(--color-letter-hover);
+  position: relative;
+}
+
+.home-subtitle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.3s;
 }
 
 .home-description {
   font-size: 16px;
   margin-top: 20px;
+  position: relative;
+  text-align: justify;
+}
+
+.home-description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.6s;
 }
 
 .home-content .btn-box {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  width: 345px;
+  width: 370px;
   height: 50px;
   margin-top: 40px;
+  position: relative;
+}
+
+.home-content .btn-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
 }
 
 .home-content .btn-box .btn {
@@ -173,6 +240,19 @@ header {
   justify-content: space-between;
 }
 
+.home-sci::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  animation: showRight 1s ease forwards;
+  animation-delay: 2.5s;
+  z-index: 3;
+}
+
 .home-sci a{
   position: relative;
   display: inline-flex;
@@ -212,290 +292,164 @@ header {
   color: var(--color-background);
 }
 
+/* Animations */
 /*|----------------------------------------------------------------|*/
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-
-/* global - Mobile - vertical*/
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-@media screen and (max-width: 667px) {
-  /* header */
-  /*|----------------------------------------------------------------|*/
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-
-  .logo {
-    font-size: 25px;
-    color: var(--color-letter);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  /* header - navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 35px;
-  }
-
-  .navbar a {
-    font-size: 18px;
-    color: var(--color-letter);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .navbar a:hover,
-  .navbar a.active {
-    color: var(--color-letter-hover);
-  }
-  /*|----------------------------------------------------------------|*/
-
-  /* home */
-  /*|----------------------------------------------------------------|*/
-  .home {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-  }
-
-  .home-content {
-    width: 600px;
-  }
-
-  .home-title {
-    font-size: 56px;
-    font-weight: 700;
-  }
-
-  .home-subtitle {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--color-letter-hover);
-  }
-
-  .home-description {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  .home-content .btn-box {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 345px;
-    height: 50px;
-    margin-top: 40px;
-  }
-
-  .home-content .btn-box .btn {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 160px;
-    height: 100%;
-    background-color: var(--color-letter-hover);
-    border: 2px solid var(--color-letter-hover);
-    border-radius: 8px;
-    font-size: 19px;
-    color: var(--color-background);
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-
-  .home-content .btn-box .btn:hover {
-    color: var(--color-letter-hover);
-  }
-
-  .home-content .btn-box .btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: var(--color-background);
-    z-index: -1;
-    border-radius: 8px;
-    transition: 0.5s;
-  }
-
-  .home-content .btn-box .btn:hover::before {
-    width: 100%;
-    transform: scale(1.1);
-    transition: all 0.5s ease;
-  }
-
-  .home-content .btn-box .btn:nth-child(2) {
-    background-color: transparent;
-    color: var(--color-letter-hover);
-  }
-
-  .home-content .btn-box .btn:nth-child(2)::before {
-    background-color: var(--color-letter-hover);
-  }
-
-  .home-content .btn-box .btn:nth-child(2):hover {
-    color: var(--color-background);
+@keyframes showRight {
+  100% {
+    width: 0;
   }
 }
+
+/*|----------------------------------------------------------------|*/
 /*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
 
 /* global - Mobile - Horizontal*/
 /*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-@media screen and (max-width: 540px) {
-  /* header */
-  /*|----------------------------------------------------------------|*/
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-
+@media (min-width: 270px) and (max-width: 655px) {
+  /* Ajustar el tamaño del logo y la fuente en el header */
   .logo {
-    font-size: 15px;
-    color: var(--color-letter-hover);
-    text-decoration: none;
-    font-weight: 600;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
   }
 
-  /* header - navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
+  .navbar{
+    gap: 12px;
   }
 
+  /* Ajustar el tamaño de la fuente en el navbar */
   .navbar a {
-    font-size: 14px;
-    color: var(--color-letter);
-    text-decoration: none;
-    font-weight: 500;
+    font-size: 10px;
   }
 
-  .navbar a:hover,
-  .navbar a.active {
-    color: var(--color-letter-hover);
-  }
-  /*|----------------------------------------------------------------|*/
-
-  /* home */
-  /*|----------------------------------------------------------------|*/
-  .home {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-  .home-content {
-    width: 600px;
-  }
-
+  /* Ajustar el tamaño de la fuente en el contenido de la sección home */
   .home-title {
-    font-size: 45px;
-    font-weight: 700;
+    font-size: 30px;
   }
 
   .home-subtitle {
-    font-size: 21px;
-    font-weight: 700;
-    color: var(--color-letter-hover);
+    font-size: 20px;
   }
 
   .home-description {
-    font-size: 14px;
-    margin-top: 20px;
-    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  .home-content{
+    width: 100%;
   }
 
   .home-content .btn-box {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 245px;
     height: 40px;
     margin-top: 40px;
-  }
-
-  .home-content .btn-box .btn {
     position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 140px;
-    height: 100%;
-    background-color: var(--color-letter-hover);
-    border: 2px solid var(--color-letter-hover);
-    border-radius: 8px;
+  }
+
+  /* Ajustar el tamaño de los botones */
+  .home-content .btn-box .btn {
+    width: 120px;
     font-size: 14px;
-    color: var(--color-background);
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: 0.5s;
   }
 
-  .home-content .btn-box .btn:hover {
-    color: var(--color-letter-hover);
+  .home-sci{
+    justify-content: left;
+    gap: 12px;
   }
 
-  .home-content .btn-box .btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: var(--color-background);
-    z-index: -1;
-    border-radius: 8px;
-    transition: 0.5s;
+  /* Ajustar el tamaño de los íconos de redes sociales */
+  .home-sci a {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
   }
 
-  .home-content .btn-box .btn:hover::before {
+  /* Ajustar el tamaño de la imagen de fondo de la sección home */
+  .home {
+    padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
-    transform: scale(1.1);
-    transition: all 0.5s ease;
+    height: 100vh;
+    background-position: top 10% left 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+}
+
+/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
+
+/* global - Mobile - Vertical*/
+/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
+@media (min-width: 656px ) and (max-width: 767px) {
+  .header {
+    position: relative;
   }
 
-  .home-content .btn-box .btn:nth-child(2) {
-    background-color: transparent;
-    color: var(--color-letter-hover);
+  /* Ajustar el tamaño del logo y la fuente en el header */
+  .logo {
+    font-size: 22px;
   }
 
-  .home-content .btn-box .btn:nth-child(2)::before {
-    background-color: var(--color-letter-hover);
+  .navbar{
+    gap: 14px;
   }
 
-  .home-content .btn-box .btn:nth-child(2):hover {
-    color: var(--color-background);
+  /* Ajustar el tamaño de la fuente en el navbar */
+  .navbar a {
+    font-size: 16px;
+  }
+
+  .home {
+    height: 110vh;
+    background-size: 90px;
+    background-position-x: 550px;
+    background-position-y: 70px;
+    padding-right: 5%;
+  }
+
+  /* Ajustar el tamaño de la fuente en el contenido de la sección home */
+  .home-title {
+    font-size: 40px;
+  }
+
+  .home-subtitle {
+    font-size: 24px;
+  }
+
+  .home-description {
+    font-size: 14px;
+  }
+
+  .home-content .btn-box {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 265px;
+    height: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  /* Ajustar el tamaño de los botones */
+  .home-content .btn-box .btn {
+    width: 130px;
+    font-size: 16px;
+  }
+
+  .home-sci{
+    position: absolute;
+    bottom: -105px;
+    width: 120px;
+  }
+
+  /* Ajustar el tamaño de los íconos de redes sociales */
+  .home-sci a {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
   }
 }
