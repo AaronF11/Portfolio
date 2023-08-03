@@ -1,35 +1,45 @@
-/* Import Google Fonts - Poppins (already provided) */
-
-/* root */
+/* Root */
 :root {
   --color-background: #fcf7f4;
   --color-letter: #020202;
   --color-letter-hover: #b188ff;
 }
 
-/* global - Desktop*/
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
+/*----------------- General -------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background: var(--color-background);
+  background-color: var(--color-background);
   color: var(--color-letter);
 }
 
-/* header */
-/*|----------------------------------------------------------------|*/
-header {
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/*----------------- Header -------------------*/
+.header {
+  /* Dar una posición fija para que se mantenga en la parte superior */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
-  background: transparent;
+  padding: 2rem 9%;
+  background: var(--color-background);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,419 +47,780 @@ header {
 }
 
 .logo {
-  font-size: 25px;
-  color: var(--color-letter);
-  text-decoration: none;
+  /* Dar un tamaño al logo */
+  font-size: 2.5rem;
   font-weight: 600;
-  position: relative;
-}
-
-.logo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  animation: showRight 1s ease forwards;
-  animation-delay: .4s;
-}
-
-/* header - navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 35px;
+  color: var(--color-letter);
+  cursor: default;
 }
 
 .navbar a {
-  font-size: 18px;
-  color: var(--color-letter);
-  text-decoration: none;
+  /* Dar un tamaño a los enlaces */
+  font-size: 1.7rem;
   font-weight: 500;
+  color: var(--color-letter);
+  margin-left: 4rem;
+  cursor: pointer;
 }
 
 .navbar a:hover,
 .navbar a.active {
+  /* Dar un color al pasar el mouse por encima */
   color: var(--color-letter-hover);
 }
-/*|----------------------------------------------------------------|*/
 
-/* home */
-/*|----------------------------------------------------------------|*/
+#menu-icon {
+  /* Dar un tamaño al icono del menú */
+  font-size: 3.6rem;
+  color: var(--color-letter);
+  cursor: pointer;
+  display: none;
+}
+
+/*----------------- Home -------------------*/
 .home {
-  height: 100vh;
+  /* Dar un tamaño al contenedor */
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 10%;
-  background: url(/Images/Background-Dev.svg);
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 700px 400px;
+  height: 100vh;
 }
 
 .home-content {
-  width: 600px;
+  /* Dar un tamaño al contenedor */
+  margin-right: 1.5rem;
 }
 
-.home-title {
-  font-size: 56px;
+.home-content h3{
+  /* Dar un tamaño a los h3 */
+  font-size: 3.2rem;
   font-weight: 700;
-  position: relative;
 }
 
-.home-title::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  animation: showRight 1s ease forwards;
-  animation-delay: 1s;
+.home-content h3:nth-last-of-type(2){
+  /* Dar un tamaño a los h3 */
+  margin-bottom: 0rem;
 }
 
-.home-subtitle {
-  font-size: 32px;
-  font-weight: 700;
+span {
+  /* Dar un tamaño a los span */
   color: var(--color-letter-hover);
-  position: relative;
 }
 
-.home-subtitle::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  animation: showRight 1s ease forwards;
-  animation-delay: 1.3s;
+.home-content h1 {
+  /* Dar un tamaño a los h1 */
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-.home-description {
-  font-size: 16px;
-  margin-top: 20px;
-  position: relative;
+.home-content p {
+  /* Dar un tamaño a los párrafos */
+  font-size: 1.6rem;
   text-align: justify;
 }
 
-.home-description::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  animation: showRight 1s ease forwards;
-  animation-delay: 1.6s;
+.social-media {
+  /* Dar un tamaño al contenedor */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: row;
 }
 
-.home-content .btn-box {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 370px;
-  height: 50px;
-  margin-top: 40px;
-  position: relative;
-}
-
-.home-content .btn-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  animation: showRight 1s ease forwards;
-  animation-delay: 1.9s;
-  z-index: 2;
-}
-
-.home-content .btn-box .btn {
-  position: relative;
+.social-media a{
+  /* Dar un tamaño a los enlaces */
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
-  height: 100%;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--color-letter-hover);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--color-letter-hover);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.social-media a:hover {
+  /* Dar un color al pasar el mouse por encima */
   background-color: var(--color-letter-hover);
-  border: 2px solid var(--color-letter-hover);
-  border-radius: 8px;
-  font-size: 19px;
   color: var(--color-background);
-  text-decoration: none;
+  box-shadow: 0 0 1rem var(--color-letter-hover);
+}
+
+.btn {
+  /* Dar un tamaño al botón */
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: var(--color-letter-hover);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--color-letter-hover);
+  font-size: 1.6rem;
+  color: var(--color-background);
+  letter-spacing: .1rem;
   font-weight: 600;
-  letter-spacing: 1px;
-  z-index: 1;
-  overflow: hidden;
-  transition: 0.5s;
+  transition: .5s ease;
 }
 
-.home-content .btn-box .btn:hover {
-  color: var(--color-letter-hover);
+.btn:hover {
+  /* Dar un color al pasar el mouse por encima */
+  box-shadow: none;
 }
 
-.home-content .btn-box .btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--color-background);
-  z-index: -1;
-  border-radius: 8px;
-  transition: 0.5s;
-}
-
-.home-content .btn-box .btn:hover::before {
-  width: 100%;
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-}
-
-.home-content .btn-box .btn:nth-child(2) {
-  background-color: transparent;
-  color: var(--color-letter-hover);
-}
-
-.home-content .btn-box .btn:nth-child(2)::before {
+.home-img {
+  /* Dar un tamaño al contenedor de la imagen */
   background-color: var(--color-letter-hover);
+  border-radius: 100%;
+  width: 26.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--color-letter-hover) .4rem solid;
+  animation: FloatImage 4s ease-in-out infinite;
 }
 
-.home-content .btn-box .btn:nth-child(2):hover {
+.home-img img {
+  /* Dar un tamaño a la imagen */
+  border-radius: 100%;
+  width: 26vw;
+  box-shadow: 0 0 3rem var(--color-letter-hover);
+}
+
+.home-img img:hover {
+  /* Dar un tamaño a la imagen al pasar el mouse por encima */
+  box-shadow: 0 0 4rem var(--color-letter-hover);
+}
+
+/*----------------- About -------------------*/
+.about {
+  /* Dar un tamaño al contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-background);
+  color: var(--color-letter);
+}
+
+.about-img {
+  /* Dar un tamaño al contenedor de la imagen */
+  background-color: var(--color-letter-hover);
+  border-radius: 100%;
+  width: 26.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--color-letter-hover) .4rem solid;
+  animation: FloatImage 4s ease-in-out infinite;
+}
+
+.about-img img {
+  /* Dar un tamaño a la imagen */
+  border-radius: 100%;
+  width: 26vw;
+  box-shadow: 0 0 3rem var(--color-letter-hover);
+}
+
+.about-img img:hover {
+  /* Dar un tamaño a la imagen al pasar el mouse por encima */
+  box-shadow: 0 0 4rem var(--color-letter-hover);
+}
+
+.about-content {
+  /* Dar un tamaño al contenedor */
+  margin-left: 1.5rem;
+}
+
+.heading {
+  /* Dar un tamaño a los heading */
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  /* Dar un tamaño a los h2 */
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  /* Dar un tamaño a los h3 */
+  text-align: left;
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  /* Dar un tamaño a los párrafos */
+  text-align: justify;
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.skills {
+  /* Dar un tamaño al contenedor */
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.skill {
+  /* Dar un tamaño al contenedor */
+  margin-bottom: .5rem;
+  padding: 2rem;
+  width: 8.5rem;
+  background-color: var(--color-background);
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem var(--color-letter-hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill:hover {
+  /* Dar un tamaño al contenedor al pasar el mouse por encima */
+  box-shadow: 0 0 2rem var(--color-letter-hover);
+  transform: scale(1.1);
+}
+
+.skill h4 {
+  /* Dar un tamaño a los h4 */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-letter-hover);
+}
+
+.skill .bar i{
+  /* Dar un tamaño a los iconos */
+  font-size: 2.5rem;
+  color: var(--color-background);
+  background-color: var(--color-letter-hover);
+  border-radius: 50%;
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+
+.skill span {
+  /* Dar un tamaño a los span */
+  font-size: 1.4rem;
+  color: var(--color-letter);
+}
+
+/*----------------- Services -------------------*/
+.services h2 {
+  /* Dar un tamaño a los h2 */
+  margin-bottom: 5rem;
+}
+
+.heading {
+  /* Dar un tamaño a los heading */
+  text-align: center;
+  color: var(--color-letter);
+  font-size: 4.5rem;
+}
+
+.services-container {
+  /* Dar un tamaño al contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.service-box {
+  /* Dar un tamaño al contenedor */
+  flex: 1 1 30rem;
+  background-color: var(--color-background);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem dotted var(--color-letter-hover);
+  transition: .5s ease;
+  height: 45rem;
+  width: 10rem;
+}
+
+.service-box:hover {
+  /* Dar un tamaño al contenedor al pasar el mouse por encima */
+  box-shadow: 0 0 2rem var(--color-letter-hover);
+  border: none;
+  transform: scale(1.02);
+}
+
+.service-box i {
+  /* Dar un tamaño a los iconos */
+  font-size: 7rem;
+  color: var(--color-letter-hover);
+  margin-bottom: 1rem;
+}
+
+.service-box h3 {
+  /* Dar un tamaño a los h3 */
+  font-size: 2.6rem;
+  color: var(--color-letter);
+}
+
+.service-box p {
+  /* Dar un tamaño a los párrafos */
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+  color: var(--color-letter);
+}
+
+/*----------------- Portfolio -------------------*/
+.portfolio {
+  /* Dar un tamaño al contenedor */
+  background-color: var(--color-background);
+  color: var(--color-letter);
+}
+
+.portfolio h2 {
+  /* Dar un tamaño a los h2 */
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.portfolio-container {
+  /* Dar un tamaño al contenedor */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.portfolio-box {
+  /* Dar un tamaño al contenedor */
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  height: 35rem;
+}
+
+.portfolio-box img {
+  /* Dar un tamaño a las imágenes */
+  width: 100%;
+  transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+  /* Dar un tamaño al contenedor al pasar el mouse por encima */
+  transform: scale(1.1);
+}
+
+.portfolio-layer{
+  /* Dar un tamaño al contenedor */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,.8), var(--color-letter-hover));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  /* Dar un tamaño al contenedor al pasar el mouse por encima */
+  transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+  /* Dar un tamaño a los h3 */
+  font-size: 3rem;
   color: var(--color-background);
 }
-/*|----------------------------------------------------------------|*/
 
-/* Social media */
-/*|----------------------------------------------------------------|*/
-.home-sci{
-  position: absolute;
-  bottom: 40px;
-  width: 170px;
+.portfolio-layer p {
+  /* Dar un tamaño a los párrafos */
+  font-size: 1.6rem;
+  color: var(--color-background);
+  margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+  /* Dar un tamaño a los enlaces */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--color-background);
+  border-radius: 50%
+}
+
+.portfolio-layer a i {
+  /* Dar un tamaño a los iconos */
+  font-size: 2rem;
+  color: var(--color-letter);
+}
+
+/*----------------- Contact -------------------*/
+.contact h2 {
+  /* Dar un tamaño a los h2 */
+  margin-bottom: 3rem;
+}
+
+.contact form{
+  /* Dar un tamaño al contenedor */
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  /* Dar un tamaño a los input */
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.home-sci::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
+.contact form .input-box input, 
+.contact form textarea {
+  /* Dar un tamaño a los input */
   width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  animation: showRight 1s ease forwards;
-  animation-delay: 2.5s;
-  z-index: 3;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--color-letter);
+  border-radius: .8rem;
+  margin: .7rem 0;
+  box-shadow: var(--color-letter-hover) 0 0 .5rem;
 }
 
-.home-sci a{
-  position: relative;
-  display: inline-flex;
+.contact form .input-box input:hover{
+  /* Dar un tamaño a los input al pasar el mouse por encima */
+  box-shadow: var(--color-letter-hover) 0 0 .7rem;
+  transform: scale(1.02);
+}
+
+.contact form textarea:hover {
+  /* Dar un tamaño a los input al pasar el mouse por encima */
+  box-shadow: var(--color-letter-hover) 0 0 .7rem;
+  transform: scale(1.02);
+}
+
+.contact form .input-box input {
+  /* Dar un tamaño a los input */
+  width: 49%;
+}
+
+.contact form textarea {
+  /* Dar un tamaño a los input */
+  height: 15rem;
+  resize: none;
+}
+
+.contact form .btn {
+  /* Dar un tamaño a los botones */
+  margin-top: 2rem;
+}
+
+.contact-container {
+  /* Dar un tamaño al contenedor */
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: 2px solid var(--color-letter-hover);
-  border-radius: 50px;
-  font-size: 20px;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info {
+  /* Dar un tamaño al contenedor */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.contact-box {
+  /* Dar un tamaño al contenedor */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-box i {
+  /* Dar un tamaño a los iconos */
+  font-size: 2rem;
   color: var(--color-letter-hover);
-  text-decoration: none;
-  z-index: 1;
-  overflow: hidden;
-  transition: .5s;
 }
 
-.home-sci a::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: var(--color-letter-hover);
-  z-index: -1;
-  transition: .5s;
-  border-radius: 50px;
+
+.contact-text h4 {
+  /* Dar un tamaño a los h4 */
+  font-size: 1.2rem;
+  color: var(--color-letter);
+  text-align: center;
 }
 
-.home-sci a:hover::before{
-  width: 100%;
+.contact-text p {
+  /* Dar un tamaño a los párrafos */
+  font-size: 1rem;
+  color: var(--color-letter);
 }
 
-.home-sci a:hover{
-  color: var(--color-background);
+/*----------------- Responsive -------------------*/
+.header.sticky {
+  /* Dar un tamaño al contenedor */
+  border-bottom: .2rem solid rgba(177, 136, 255,.3);
 }
 
-/* Animations */
-/*|----------------------------------------------------------------|*/
-@keyframes showRight {
-  100% {
-    width: 0;
+/*----------------- Breakpoints-------------------*/
+@media (max-width: 1200px) {
+  html {
+    /* Dar un tamaño al contenedor */
+    font-size: 55%;
   }
 }
 
-/*|----------------------------------------------------------------|*/
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-
-/* global - Mobile - Horizontal*/
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-@media (min-width: 270px) and (max-width: 655px) {
-  /* Ajustar el tamaño del logo y la fuente en el header */
-  .logo {
-    font-size: 0px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navbar{
-    gap: 12px;
-  }
-
-  /* Ajustar el tamaño de la fuente en el navbar */
-  .navbar a {
-    font-size: 10px;
-  }
-
-  /* Ajustar el tamaño de la fuente en el contenido de la sección home */
-  .home-title {
-    font-size: 30px;
-  }
-
-  .home-subtitle {
-    font-size: 20px;
-  }
-
-  .home-description {
-    font-size: 12px;
-  }
-
-  .home-content{
-    width: 100%;
-  }
-
-  .home-content .btn-box {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 245px;
-    height: 40px;
-    margin-top: 40px;
-    position: relative;
-  }
-
-  /* Ajustar el tamaño de los botones */
-  .home-content .btn-box .btn {
-    width: 120px;
-    font-size: 14px;
-  }
-
-  .home-sci{
-    justify-content: left;
-    gap: 12px;
-  }
-
-  /* Ajustar el tamaño de los íconos de redes sociales */
-  .home-sci a {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-  }
-
-  /* Ajustar el tamaño de la imagen de fondo de la sección home */
-  .home {
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-    height: 100vh;
-    background-position: top 10% left 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 100px 100px;
-  }
-}
-
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-
-/* global - Mobile - Vertical*/
-/*|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|*/
-@media (min-width: 656px ) and (max-width: 767px) {
+@media (max-width: 991px) {
   .header {
-    position: relative;
+    /* Dar un tamaño al contenedor */
+    padding: 2rem 3%;
   }
 
-  /* Ajustar el tamaño del logo y la fuente en el header */
-  .logo {
-    font-size: 22px;
+  section {
+    /* Dar un tamaño al contenedor */
+    padding: 10rem 3% 2rem;
   }
 
-  .navbar{
-    gap: 14px;
+  .services {
+    /* Dar un tamaño al contenedor */
+    padding-bottom: 7rem;
   }
 
-  /* Ajustar el tamaño de la fuente en el navbar */
+  .portfolio {
+    /* Dar un tamaño al contenedor */
+    padding-bottom: 5rem;
+  }
+
+  .contact {
+    /* Dar un tamaño al contenedor */
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    /* Dar un tamaño al contenedor */
+    display: block;
+  }
+
+  .navbar {
+    /* Dar un tamaño al contenedor */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--color-background);
+    border-top: .1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    display: none;
+  }
+
+  .navbar.active {
+    /* Dar un tamaño al contenedor */
+    display: block;
+  }
+
   .navbar a {
-    font-size: 16px;
+    /* Dar un tamaño a los enlaces */
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
   }
 
   .home {
-    height: 110vh;
-    background-size: 90px;
-    background-position-x: 550px;
-    background-position-y: 70px;
-    padding-right: 5%;
+    /* Dar un tamaño al contenedor */
+    flex-direction: column;
+    gap: 3rem;
   }
 
-  /* Ajustar el tamaño de la fuente en el contenido de la sección home */
-  .home-title {
-    font-size: 40px;
+  .home-content h3 {
+    /* Dar un tamaño a los h3 */
+    font-size: 2.6rem;
   }
 
-  .home-subtitle {
-    font-size: 24px;
+  .home-content h1 {
+    /* Dar un tamaño a los h1 */
+    font-size: 5rem;
   }
 
-  .home-description {
-    font-size: 14px;
-  }
-
-  .home-content .btn-box {
-    display: inline-flex;
-    justify-content: space-between;
+  .home-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    background-color: var(--color-letter-hover);
+    border-radius: 100%;
+    width: 25.5vw;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 265px;
-    height: 40px;
-    margin-top: 40px;
-    position: relative;
+    border: var(--color-letter-hover) .4rem solid;
+  }
+  
+  .home-img img {
+    /* Dar un tamaño a la imagen */
+    border-radius: 100%;
+    width: 25vw;
+    box-shadow: 0 0 3rem var(--color-letter-hover);
   }
 
-  /* Ajustar el tamaño de los botones */
-  .home-content .btn-box .btn {
-    width: 130px;
-    font-size: 16px;
+  .about {
+    /* Dar un tamaño al contenedor */
+    flex-direction: column-reverse;
+    gap: 3rem;
   }
 
-  .home-sci{
-    position: absolute;
-    bottom: -105px;
-    width: 120px;
+  .about-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 25.5vw;
   }
 
-  /* Ajustar el tamaño de los íconos de redes sociales */
-  .home-sci a {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
+  .about-img img {
+    /* Dar un tamaño a la imagen */
+    width: 25vw;
+  }
+
+  .services h2 {
+    /* Dar un tamaño a los h2 */
+    margin-bottom: 3rem;
+  }
+
+  .portfolio h2{
+    /* Dar un tamaño a los h2 */
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container{
+    /* Dar un tamaño al contenedor */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 617px) {
+  .portfolio-container{
+    /* Dar un tamaño al contenedor */
+    grid-template-columns: 1fr;
+  }
+
+  .home-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 30.5vw;
+  }
+
+  .home-img img {
+    /* Dar un tamaño a la imagen */
+    width: 30vw;
+  }
+
+  .about-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 30.5vw;
+  }
+
+  .about-img img {
+    /* Dar un tamaño a la imagen */
+    width: 30vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    /* Dar un tamaño al contenedor */
+    font-size: 50%;
+  }
+
+  .contact form .input-box input{
+    /* Dar un tamaño al contenedor */
+    width: 100%;
+  }
+
+  .contact-info {
+    /* Dar un tamaño al contenedor */
+    gap: 1rem;
+  }
+
+  .home-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 30.5vw;
+  }
+
+  .home-img img {
+    /* Dar un tamaño a la imagen */
+    width: 30vw;
+  }
+
+  .about-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 30.5vw;
+  }
+
+  .about-img img {
+    /* Dar un tamaño a la imagen */
+    width: 30vw;
+  }
+}
+
+@media (max-width: 365px) {
+  .home-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 45.5vw;
+  }
+
+  .home-img img {
+    /* Dar un tamaño a la imagen */
+    width: 45vw;
+  }
+
+  .about-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    width: 45.5vw;
+  }
+
+  .about-img img {
+    /* Dar un tamaño a la imagen */
+    width: 45vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .home-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    display: none;
+  }
+
+  .about-img {
+    /* Dar un tamaño al contenedor de la imagen */
+    display: none;
+  }
+}
+
+/*----------------- Animations -------------------*/
+@keyframes FloatImage {
+  0% {
+    transform: translateY(0) scale(1.05);
+  }
+  50% {
+    transform: translateY(-2.4rem) scale(1);
+  }
+  100% {
+    transform: translateY(0) scale(1.05);
   }
 }

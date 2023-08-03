@@ -1,70 +1,315 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/Images/Favicon.ico" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Noto+Serif:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <title>Portafolio</title>
     <link rel="stylesheet" href="/Styles/app.css" />
+    <link rel="shortcut icon" href="/Images/Favicon.ico" type="image/x-icon" />
+    <title>Portfolio</title>
+    <!-- Icons -->
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
   </head>
   <body>
-    <!-- Encabezado -->
+    <!-- Header design -->
     <header class="header">
-      <!-- Logotipo -->
-      <a href="index.html" class="logo">Aarón.</a>
-      <!-- Navegación -->
+      <a href="index.html" class="logo"> Portfolio </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
       <nav class="navbar">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="#">Acerca de mí</a>
-        <a href="#">Servicios</a>
-        <a href="#">Portafolio</a>
-        <a href="#">Contacto</a>
+        <a href="#home" class="active">Inicio</a>
+        <a href="#about">Acerca de mí</a>
+        <a href="#services">Servicios</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contacto</a>
       </nav>
     </header>
-    <!-- Contenido principal -->
-    <section class="home">
+    <!-- Home section -->
+    <section class="home" id="home">
       <div class="home-content">
-        <h1 class="home-title">Hola, soy Aarón Flores</h1>
-
-        <h3 class="home-subtitle">Desarrollador desktop y web</h3>
-
-        <p class="home-description">
+        <h3>Hola, te saluda</h3>
+        <h1>Aarón Flores</h1>
+        <h3>Y yo soy <span class="multiple-text"></span></h3>
+        <p>
           Soy estudiante de Computación en la UDG, con enfoque en desarrollo de
-          aplicaciones desktop y web. Me especializo en front-end y también tengo
-          experiencia en back-end. Mi objetivo es crear interfaces atractivas y
-          funcionales para mejorar la experiencia del usuario.
+          aplicaciones desktop y web. Me especializo en front-end y también
+          tengo experiencia en back-end. Mi objetivo es crear interfaces
+          atractivas y funcionales para mejorar la experiencia del usuario.
         </p>
-
-        <div class="btn-box">
-          <a href="#" class="btn">Contáctame</a>
-          <a href="/Assets/Aarón Flores Pasos - CV.pdf" class="btn" download>Descargar CV</a>
+        <div class="social-media">
+          <a href=""><i class="bx bxl-facebook"></i></a>
+          <a href=""><i class="bx bxl-twitter"></i></a>
+          <a href=""><i class="bx bxl-instagram"></i></a>
+          <a href=""><i class="bx bxl-linkedin"></i></a>
         </div>
+        <a href="/Assets/Aarón Flores Pasos - CV.pdf" download class="btn"
+          >Descargar CV</a
+        >
       </div>
-
-      <!-- Redes sociales -->
-      <div class="home-sci">
-        <a
-          href="https://www.facebook.com/profile.php?id=100009552543394"
-          target="_blank"
-          ><i class="bx bxl-facebook"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/aarón-flores-pasos-dev/"
-          target="_blank"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a href="https://github.com/AaronF11" target="_blank"
-          ><i class="bx bxl-github"></i
-        ></a>
+      <div class="home-img">
+        <img src="/Images/index/Home.jpg" alt="" />
       </div>
     </section>
+    <!-- About section -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="/Images/index/About.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">Acerca de <span class="about-multiple-text"></span></h2>
+        <h3>Desarrollador Web & Desktop</h3>
+        <p>
+          Soy estudiante de Computación en la UDG, con enfoque en desarrollo de
+          aplicaciones desktop y web. Me especializo en front-end y también
+          tengo experiencia en back-end. Mi objetivo es crear interfaces
+          atractivas y funcionales para mejorar la experiencia del usuario.
+        </p>
+        <h3 class="heading">Habilidades</h3>
+        <div class="skills">
+          <div class="skill">
+            <h4>HTML</h4>
+            <div class="bar">
+              <div class="html"><i class="bx bxl-html5"></i></div>
+            </div>
+            <span>Junior</span>
+          </div>
+          <div class="skill">
+            <h4>CSS</h4>
+            <div class="bar">
+              <div class="css"><i class="bx bxl-css3"></i></div>
+            </div>
+            <span>Junior</span>
+          </div>
+          <div class="skill">
+            <h4>JS</h4>
+            <div class="bar">
+              <div class="js"><i class="bx bxl-javascript"></i></div>
+            </div>
+            <span>Junior</span>
+          </div>
+          <div class="skill">
+            <h4>SQL</h4>
+            <div class="bar">
+              <div class="sql"><i class="bx bxs-data"></i></div>
+            </div>
+            <span>Junior</span>
+          </div>
+          <div class="skill">
+            <h4>Python</h4>
+            <div class="bar">
+              <div class="python"><i class="bx bxl-python"></i></div>
+            </div>
+            <span>Semisenior</span>
+          </div>
+          <div class="skill">
+            <h4>C#</h4>
+            <div class="bar">
+              <div class="csharp"><i class="bx bxl-c-plus-plus"></i></div>
+            </div>
+            <span>Semisenior</span>
+          </div>
+          <div class="skill">
+            <h4>GitHub</h4>
+            <div class="bar">
+              <div class="github"><i class="bx bxl-github"></i></div>
+            </div>
+            <span>Semisenior</span>
+          </div>
+          <div class="skill">
+            <h4>Git</h4>
+            <div class="bar">
+              <div class="git"><i class="bx bxl-git"></i></div>
+            </div>
+            <span>Semisenior</span>
+          </div>
+        </div>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+    </section>
+    <!-- Services section -->
+    <section class="services" id="services">
+      <h2 class="heading">Nuestros <span class="services-multiple-text"></span></h2>
+      <div class="services-container">
+        <div class="service-box">
+          <i class="bx bx-code-block"></i>
+          <h3>Desarrollo Web</h3>
+          <p>
+            Elaboración sitios web modernos y personalizados utilizando HTML,
+            CSS y JavaScript, centrándome en la usabilidad y la experiencia del cliente
+            y también la del usuario final.
+          </p>
+          <a href="#" class="btn">Leer más</a>
+        </div>
+        <div class="service-box">
+          <i class="bx bx-desktop"></i>
+          <h3>Desarrollo Desktop</h3>
+          <p>
+            Ofrezco servicios de desarrollo de aplicaciones de escritorio
+            eficientes en Python y C#, proporcionando soluciones multiplataforma
+            para mejorar la productividad de mis clientes.
+          </p>
+          <a href="#" class="btn">Leer más</a>
+        </div>
+        <div class="service-box">
+          <i class="bx bxs-pencil"></i>
+          <h3>Diseño de interfaces</h3>
+          <p>
+            Como diseñador de interfaces, creo experiencias atractivas y
+            funcionales que optimizan la interacción del usuario, trabajando en
+            colaboración con equipos de desarrollo.
+          </p>
+          <a href="#" class="btn">Leer más</a>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio section -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Mi <span class="portfolio-multiple-text"></span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img
+            src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Proyecto 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              distinctio.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Proyecto 2</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              distinctio.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Proyecto 3</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              distinctio.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Proyecto 4</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              distinctio.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Proyecto 5</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              distinctio.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Proyecto 6</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              distinctio.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <h2 class="heading"><span class="contact-multiple-text"></span></h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Nombre" class="box" />
+          <input type="email" placeholder="Email" class="box" />
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Número" class="box" />
+          <input type="text" placeholder="Asunto" class="box" />
+        </div>
+        <textarea
+          name="mensaje"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Escribe tu mensaje"
+        ></textarea>
+        <input type="submit" value="Enviar mensaje" class="btn" />
+      </form>
+      <div class="contact-container">
+        <h3>Información de contacto</h3>
+        <div class="contact-info">
+          <div class="contact-box">
+            <i class="bx bx-location-plus"></i>
+            <div class="contact-text">
+              <h4>Dirección</h4>
+              <p>P. Vallarta</p>
+            </div>
+          </div>
+          <div class="contact-box">
+            <i class="bx bx-envelope"></i>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>aaronflorespasos@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-box">
+            <i class="bx bx-phone-call"></i>
+            <div class="contact-text">
+              <h4>Teléfono</h4>
+              <p>3223624573</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Script -->
+    <script src="Js/app.js"></script>
   </body>
 </html>
